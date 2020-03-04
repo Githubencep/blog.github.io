@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<HTML expr:dir='data:blog.languageDirection' lang='en'> 
+&lt;head&gt;
+<meta charset='utf-8'/>
+<meta content='width=device-width,minimum-scale=1,initial-scale=1' name='viewport'/>
+<meta content='IE=9; IE=8; IE=7; IE=EDGE; chrome=1' http-equiv='X-UA-Compatible'/>
+<b:if cond='data:blog.pageType == &quot;index&quot;'>
+    <title><data:blog.pageTitle/></title>
+<b:else/>
+    <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+        <title>404: Page Not Found | <data:blog.title/></title>
+    <b:else/>
+        <title><data:blog.pageName/></title>
+    </b:if>
+</b:if>
+<b:include data='blog' name='all-head-content'/>
+
+&lt;style type=&quot;text/css&quot;&gt;
+&lt;!-- /*<b:skin><![CDATA[
+#header-wrapper{width:100%;}
+#main-wrapper{width:60%;float:left;}
+#sidebar-wrapper{width:40%;float:right;}
+ul,li{list-style: none;}
+*/]]></b:skin>
+<style type='text/css'>
+.quickedit{display:none;}
+/*<![CDATA[*/
+@font-face{font-family:Roboto;font-style:normal;font-weight:400;src:local('Roboto'),local('Roboto-Regular'),url(https://fonts.gstatic.com/s/roboto/v16/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2'),url(https://fonts.gstatic.com/s/roboto/v16/2UX7WLTfW3W8TclTUvlFyQ.woff) format('woff'),url(https://fonts.gstatic.com/s/roboto/v16/QHD8zigcbDB8aPfIoaupKOvvDin1pK8aKteLpeZ5c0A.ttf) format('truetype')}
+html,body{height:400px;min-height:400px;overflow:hidden}
+aside,footer,#navbar-iframe{height:0;visibility:hidden;display:none}
+body{background:transparent;margin:0;font-family:Roboto,sans-serif;}
+*{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+#header-wrapper{width:100%;margin:0 auto;padding:0;height:0;overflow:hidden}
+.content-wrapper{width:100%;max-width:100%;margin:0 auto;padding:0}
+.outer-wrapper{margin:0;padding:0}
+#main-wrapper{width:100%;margin:0 auto;padding:0;}
+.post{position:relative;margin:0;padding:0}
+.post h1,.post h2{font-size:1px;position:fixed;top:-10000px;left:-10000px}
+.post-body{font-size:18px;font-weight:400;color:#555;line-height:1.3;padding:0}
+
+.contact-form-box{width:100%;margin:0 auto;padding:0}
+#contactForm .floating-label-form-group{font-family:Roboto,sans-serif;font-size:16px;position:relative;margin-bottom:0;padding-bottom:20px;border-bottom:1px solid #ddd}
+#contactForm .floating-label-form-group:first-child{border-top:1px solid #ddd}
+#contactForm .floating-label-form-group.floating-label-form-group-with-focus{position:relative}
+#contactForm .floating-label-form-group:after,#contactForm .floating-label-form-group:before{position:absolute;bottom:-1px;width:0;height:2px;background-color:#2B0C93;content:"";transition:width .4s ease-in-out;display:block}
+#contactForm .floating-label-form-group:before{right:50%}
+#contactForm .floating-label-form-group:after{left:50%}
+#contactForm .floating-label-form-group.floating-label-form-group-with-focus:after,#contactForm .floating-label-form-group.floating-label-form-group-with-focus:before{width:50%}
+#contactForm .floating-label-form-group input,#contactForm .floating-label-form-group textarea{z-index:1;position:relative;padding-right:0;padding-left:0;border:none;border-radius:0;font:400 16px Roboto;background:0 0;box-shadow:none!important;resize:none}
+#contactForm .floating-label-form-group label{display:block;z-index:0;position:relative;top:2em;margin:0;font:300 12px Roboto;line-height:1.764705882em;vertical-align:middle;vertical-align:baseline;opacity:0;-webkit-transition:top .3s ease,opacity .3s ease;-moz-transition:top .3s ease,opacity .3s ease;-ms-transition:top .3s ease,opacity .3s ease;transition:top .3s ease,opacity .3s ease}
+#contactForm .floating-label-form-group::not(:first-child){padding-left:14px;border-left:1px solid #eee}
+#contactForm .floating-label-form-group-with-value label{top:0;opacity:1}
+#contactForm .floating-label-form-group-with-focus label{color:#2B0C93}
+#contactForm textarea.form-control{height:auto}
+#contactForm .form-control{display:block;width:100%;color:#555}
+#contactForm input:active,#contactForm input:focus,#contactForm textarea:active,#contactForm textarea:focus{outline:0}
+#contactForm .btn,#contactForm .contact-form-button-submit{font-family:Roboto,Arial,sans-serif;font-weight:700;text-transform:uppercase;font-size:18px;letter-spacing:1px;border-radius:0;padding:0 25px;height:51px;line-height:51px;color:#333;background-color:#fff;border:1px solid #ccc;cursor:pointer;margin:20px 0 0;background-image:none}
+#contactForm .contact-form-button{height:51px;line-height:51px}
+#contactForm .btn-default:focus,#contactForm .btn-default:hover,#contactForm .contact-form-button-submit:focus,#contactForm .contact-form-button-submit:hover{background-color:#2B0C93;border:1px solid #270b83;color:#fff}
+.contact-form-error-message-with-border,.contact-form-success-message-with-border{background:#fff;border:1px solid #ddd;bottom:0;box-shadow:0 2px 4px rgba(0,0,0,.2);color:#666;font-size:16px;font-weight:400;line-height:30px;opacity:1;position:static;text-align:center;margin:20px 0 0}
+.contact-form-cross{height:11px;margin:0 5px;vertical-align:0!important;width:11px;-moz-box-shadow:none!important;-webkit-box-shadow:none!important;-goog-ms-box-shadow:none!important;box-shadow:none!important}
+.contact_layout{text-align:center;position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,.8);z-index:99999}
+.contact_message{width:50%;background:#fff;border-radius:5px;padding:20px;border:1px solid transparent;text-align:center;color:#333;position:absolute;top:10%;left:50%;margin-left:-25%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+.fa.fa-pull-left,.fa.pull-left{margin-right:.3em}.fa,.fa-stack{display:inline-block}.fa-fw,.fa-li{text-align:center}@font-face{font-family:FontAwesome;src:url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/fonts/fontawesome-webfont.eot?v=4.6.0);src:url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/fonts/fontawesome-webfont.eot?#iefix&v=4.6.0) format('embedded-opentype'),url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/fonts/fontawesome-webfont.woff2?v=4.6.0) format('woff2'),url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/fonts/fontawesome-webfont.woff?v=4.6.0) format('woff'),url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/fonts/fontawesome-webfont.ttf?v=4.6.0) format('truetype'),url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/fonts/fontawesome-webfont.svg?v=4.6.0#fontawesomeregular) format('svg');font-weight:400;font-style:normal}.fa{font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-fw{width:1.28571429em}.fa-ul{padding-left:0;margin-left:2.14285714em;list-style-type:none}.fa.fa-pull-right,.fa.pull-right{margin-left:.3em}.fa-ul>li{position:relative}.fa-li{position:absolute;left:-2.14285714em;width:2.14285714em;top:.14285714em}.fa-li.fa-lg{left:-1.85714286em}.fa-border{padding:.2em .25em .15em;border:.08em solid #eee;border-radius:.1em}.fa-pull-left{float:left}.fa-pull-right,.pull-right{float:right}.pull-left{float:left}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.fa-rotate-90{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";-webkit-transform:rotate(270deg);-ms-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";-webkit-transform:scale(-1,1);-ms-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";-webkit-transform:scale(1,-1);-ms-transform:scale(1,-1);transform:scale(1,-1)}:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{filter:none}.fa-stack{position:relative;width:2em;height:2em;line-height:2em;vertical-align:middle}.fa-stack-1x,.fa-stack-2x{position:absolute;left:0;width:100%;text-align:center}.fa-stack-1x{line-height:inherit}.fa-stack-2x{font-size:2em}.fa-inverse{color:#fff}
+.contact_message:before{content:"\f164";font-family:FontAwesome;font-weight:500;font-size:30px;display:block;margin-bottom:10px}
+form{display:block;margin-top:0;padding-right:0}
+@media screen and (max-width:768px){.contact_message{width:90%!important;margin-left:-45%!important}
+.contact-form-box{width:100%}
+}
+/*]]>*/
+</style>
+&lt;/head&gt;&lt;!--<head/>--&gt;
+<body itemscope='itemscope' itemtype='http://schema.org/WebPage'>
+<div itemprop='mainContentOfPage' itemscope='itemscope' itemtype='https://schema.org/WebPageElement'>
+<div class='content-wrapper'>
+<header itemprop='mainEntity' itemscope='itemscope' itemtype='https://schema.org/WPHeader'>
+<div id='header-wrapper'>
+      <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
+        <b:widget id='Header1' locked='true' title='Mesjid Al-Juwaeni Bunikasih (Header)' type='Header' version='1'>
+          <b:widget-settings>
+            <b:widget-setting name='displayUrl'/>
+            <b:widget-setting name='displayHeight'>0</b:widget-setting>
+            <b:widget-setting name='sectionWidth'>-1</b:widget-setting>
+            <b:widget-setting name='useImage'>false</b:widget-setting>
+            <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
+            <b:widget-setting name='imagePlacement'>BEHIND</b:widget-setting>
+            <b:widget-setting name='displayWidth'>0</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main'>
+    <div id='header-inner'>
+      <div class='titlewrapper'>
+        <b:if cond='data:blog.pageType != &quot;item&quot;'>
+        <h1 class='title' itemprop='headline'>
+<b:include name='title'/>
+        </h1>
+<b:else/>
+        <p class='title' itemprop='headline'>
+          <b:include name='title'/>
+        </p>
+</b:if>
+      </div><b:include name='description'/>
+    </div>
+</b:includable>
+          <b:includable id='description'>
+  <div class='descriptionwrapper'>
+    <p class='description' itemprop='description'><span><data:description/></span></p>
+  </div>
+</b:includable>
+          <b:includable id='title'>
+    <a expr:href='data:blog.homepageUrl' expr:title='data:title' itemprop='url'><span itemprop='name'><data:title/></span></a>
+</b:includable>
+        </b:widget>
+      </b:section>
+<div class='clear'/>
+  </div>
+      </header>
+<div class='clear'/>
+<div class='outer-wrapper'> 
+<div itemscope='itemscope' itemtype='https://schema.org/Blog'>
+     <div id='main-wrapper'>
+        <b:section class='main' id='main' showaddelement='no'>
+          <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='1'>
+            <b:widget-settings>
+              <b:widget-setting name='commentLabel'>komentar</b:widget-setting>
+              <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+              <b:widget-setting name='authorLabel'>By</b:widget-setting>
+              <b:widget-setting name='disableGooglePlusShare'>true</b:widget-setting>
+              <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+              <b:widget-setting name='timestampLabel'>di</b:widget-setting>
+              <b:widget-setting name='reactionsLabel'>Reaksi:</b:widget-setting>
+              <b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
+              <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+              <b:widget-setting name='showLocation'>true</b:widget-setting>
+              <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+              <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+              <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='backlinksLabel'>Link ke posting ini</b:widget-setting>
+              <b:widget-setting name='showDateHeader'>true</b:widget-setting>
+              <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+              <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+              <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
+              <b:widget-setting name='postLocationLabel'>Lokasi:</b:widget-setting>
+              <b:widget-setting name='showAuthor'>true</b:widget-setting>
+              <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
+              <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='showLabels'>true</b:widget-setting>
+              <b:widget-setting name='postLabelsLabel'>Label:</b:widget-setting>
+              <b:widget-setting name='showBacklinks'>true</b:widget-setting>
+              <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+              <b:widget-setting name='showReactions'>true</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main' var='top'>   
+    <!-- posts -->
+    <div class='blog-posts hfeed'>
+
+      <b:include data='top' name='status-message'/>
+
+      <data:defaultAdStart/>
+      <b:loop index='x' values='data:posts' var='post'>
+        <div class='post-outer'>
+        <b:include data='post' name='post'/>
+        </div>
+        <b:if cond='data:post.includeAd'>
+          <b:if cond='data:post.isFirstPost'>
+            <data:defaultAdEnd/>
+          <b:else/>
+            <data:adEnd/>
+          </b:if>
+          <b:if cond='data:mobile == &quot;false&quot;'>
+            <div class='inline-ad'>
+              <data:adCode/>
+            </div>
+          </b:if>
+          <data:adStart/>
+        </b:if>
+        <b:if cond='data:post.trackLatency'>
+          <data:post.latencyJs/>
+        </b:if>
+      </b:loop>
+      <data:adEnd/>
+    </div>
+<div class='clear'/>
+  <!-- navigation -->
+</b:includable>
+            <b:includable id='backlinkDeleteIcon' var='backlink'/>
+            <b:includable id='backlinks' var='post'/>
+            <b:includable id='comment-form' var='post'/>
+            <b:includable id='commentDeleteIcon' var='comment'/>
+            <b:includable id='comment_count_picker' var='post'/>
+            <b:includable id='comment_picker' var='post'/>
+            <b:includable id='comments' var='post'/>
+            <b:includable id='feedLinks'/>
+            <b:includable id='feedLinksBody' var='links'/>
+            <b:includable id='iframe_comments' var='post'/>
+            <b:includable id='mobile-index-post' var='post'/>
+            <b:includable id='mobile-main' var='top'/>
+            <b:includable id='mobile-nextprev'/>
+            <b:includable id='mobile-post' var='post'/>
+            <b:includable id='nextprev'/>
+            <b:includable id='post' var='post'>
+  <article class='post hentry' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+    <b:if cond='data:blog.pageType != &quot;item&quot;'>
+<b:if cond='data:post.title'>
+      <h2 class='post-title entry-title' itemprop='headline'>
+     <b:if cond='data:post.link'>
+       <a expr:href='data:post.link' expr:title='data:post.title' itemprop='url mainEntityOfPage'><data:post.title/></a>
+     <b:else/>
+        <b:if cond='data:post.url'>
+          <a expr:href='data:post.url' expr:title='data:post.title' itemprop='url mainEntityOfPage'><data:post.title/></a>
+        <b:else/>
+          <data:post.title/>
+        </b:if>
+     </b:if>
+      </h2>
+</b:if>
+<b:else/>
+      <h1 class='post-title entry-title' itemprop='headline'>
+     <b:if cond='data:post.link'>
+       <a expr:href='data:post.link' expr:title='data:post.title' itemprop='url mainEntityOfPage'><data:post.title/></a>
+     <b:else/>
+        <b:if cond='data:post.url'>
+          <a expr:href='data:post.url' expr:title='data:post.title' itemprop='url mainEntityOfPage'><data:post.title/></a>
+        <b:else/>
+          <data:post.title/>
+        </b:if>
+     </b:if>
+      </h1>
+</b:if>
+    <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
+  <data:post.body/>
+      <div class='clear'/> <!-- clear for photos floats -->
+    </div>
+  </article>
+</b:includable>
+            <b:includable id='postQuickEdit' var='post'/>
+            <b:includable id='shareButtons' var='post'/>
+            <b:includable id='status-message'/>
+            <b:includable id='threaded-comment-form' var='post'/>
+            <b:includable id='threaded_comment_js' var='post'/>
+            <b:includable id='threaded_comments' var='post'/>
+          </b:widget>
+          <b:widget id='Followers1' locked='false' title='' type='Followers'>
+            <b:widget-settings>
+              <b:widget-setting name='borderColorTransparent'>true</b:widget-setting>
+              <b:widget-setting name='useTemplateDefaultStyles'>true</b:widget-setting>
+              <b:widget-setting name='contentSecondaryTextColor'>#000000</b:widget-setting>
+              <b:widget-setting name='contentHeadlineColor'>#000000</b:widget-setting>
+              <b:widget-setting name='endcapTextColor'>#000000</b:widget-setting>
+              <b:widget-setting name='contentTextColor'>#000000</b:widget-setting>
+              <b:widget-setting name='contentSecondaryLinkColor'>#FFFFFF</b:widget-setting>
+              <b:widget-setting name='endcapLinkColor'>#000000</b:widget-setting>
+              <b:widget-setting name='contentLinkColor'>#000000</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot; and data:codeSnippet != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <div expr:id='data:widget.instanceId + &quot;-wrapper&quot;'>
+      <b:if cond='data:codeSnippet != &quot;&quot;'>
+        <div style='margin-right:2px;'>
+          <data:codeSnippet/>
+        </div>
+      </b:if>
+    </div>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+          </b:widget>
+        </b:section>
+      </div>
+    </div>
+<aside itemprop='mainEntity' itemscope='itemscope' itemtype='https://schema.org/WPSideBar'>
+        <b:section class='sidebar' id='sidebar' preferred='yes'/>
+</aside>
+      <!-- spacer for skins that want sidebar and main to be the same height-->
+  <div class='clear'/>
+  </div>
+</div>
+</div>
+<div class='contact-form-box'>
+  
+</div>
+<script src='https://code.jquery.com/jquery-1.12.4.min.js'/>
+<script>
+$(function() {
+  $(&quot;body&quot;).on(&quot;input propertychange&quot;, &quot;.floating-label-form-group&quot;, function(e) {
+    $(this).toggleClass(&quot;floating-label-form-group-with-value&quot;, !!$(e.target).val());
+  }).on(&quot;focus&quot;, &quot;.floating-label-form-group&quot;, function() {
+    $(this).addClass(&quot;floating-label-form-group-with-focus&quot;);
+  }).on(&quot;blur&quot;, &quot;.floating-label-form-group&quot;, function() {
+    $(this).removeClass(&quot;floating-label-form-group-with-focus&quot;);
+  });
+});
+</script>
+<script src='https://www.blogger.com/static/v1/widgets/2271878333-widgets.js'/>
+<script>
+if (typeof(BLOG_attachCsiOnload) != &quot;undefined&quot; &amp;&amp; BLOG_attachCsiOnload != null) { window[&quot;blogger_templates_experiment_id&quot;] = &quot;templatesV1&quot;;window[&quot;blogger_blog_id&quot;] = &quot;<data:blog.blogId/>&quot;;BLOG_attachCsiOnload(&quot;&quot;); }_WidgetManager._Init(&quot;//www.blogger.com/rearrange?blogID\x3d<data:blog.blogId/>&quot;,&quot;<data:blog.url/>&quot;,&quot;<data:blog.blogId/>&quot;);
+_WidgetManager._RegisterWidget(&quot;_ContactFormView&quot;, new _WidgetInfo(&quot;ContactForm1&quot;, &quot;footer1&quot;, null, document.getElementById(&quot;ContactForm1&quot;), {&quot;contactFormMessageSendingMsg&quot;: &quot;Sending...&quot;, &quot;contactFormMessageSentMsg&quot;: &quot;<div class='contact_layout'><div class='contact_message'><b>Your message has been sent</b>.<br/>Jika tidak ada halangan dan kesibukan lainnya, admin akan langsung merespon pesan yang Anda kirimkan.</div></div><br/>&quot;, &quot;contactFormMessageNotSentMsg&quot;: &quot;Message could not be sent. Please try again later.&quot;, &quot;contactFormInvalidEmailMsg&quot;: &quot;A valid email address is required.&quot;, &quot;contactFormEmptyMessageMsg&quot;: &quot;Message field cannot be empty.&quot;, &quot;title&quot;: &quot;Contact Form&quot;, &quot;blogId&quot;: &quot;<data:blog.blogId/>&quot;, &quot;contactFormNameMsg&quot;: &quot;Name&quot;, &quot;contactFormEmailMsg&quot;: &quot;Email&quot;, &quot;contactFormMessageMsg&quot;: &quot;Message&quot;, &quot;contactFormSendMsg&quot;: &quot;Send&quot;, &quot;submitUrl&quot;: &quot;https://www.blogger.com/contact-form.do&quot;}, &quot;displayModeFull&quot;));
+</script>
+&lt;!--</body>--&gt; &lt;/body&gt;
+</HTML>
